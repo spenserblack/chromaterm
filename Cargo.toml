@@ -1,0 +1,15 @@
+[package]
+name = "chromaterm"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Yet another crate for terminal colors."
+repository = "https://github.com/spenserblack/chromaterm.git"
+keywords = ["color", "terminal", "ansi"]
+categories = ["command-line-interface"]
+exclude = [".devcontainer/", ".github/", ".vscode/", ".editorconfig", ".gitignore"]
+rust-version = "1.86"
+
+[dev-dependencies]
+rand = "0.9"
+rstest = { version = "0.25", default-features = false, features = ["crate-name"] }
