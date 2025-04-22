@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: Build and test (${{ matrix.rust-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        rust-version:
+          - "1.86"
+          - "stable"
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Rust ${{ matrix.rust-version }}
+        uses: dtolnay/rust-toolchain@master
+        id: setup-rust
+        with:
+          toolchain: ${{ matrix.rust-version }}
+      - name: Build
+        run: cargo build
+      - name: Test
+        run: cargo test
+
