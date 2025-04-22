@@ -14,7 +14,16 @@ fn main() {
         print!("{}", text.display_exact(SUPPORT));
     });
     println!();
-    println!("Here's the gradient again if we fall back to lower support levels:");
+    println!("Here's the gradient again if we fall back to eight-bit color support:");
+    (0..=255).step_by(8).for_each(|c| {
+        let r = 255;
+        let g = c / 2;
+        let b = 255 - c;
+        let text = " ".on_rgb(r, g, b);
+        print!("{}", text.display_fallback(ColorSupport::EightBit));
+    });
+    println!();
+    println!("Here's the gradient again if we fall back to the lowest color support:");
     (0..=255).step_by(8).for_each(|c| {
         let r = 255;
         let g = c / 2;
