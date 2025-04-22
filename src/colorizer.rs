@@ -91,7 +91,6 @@ impl<
 > fmt::Display for Colorizer<C, D>
 {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
-        // TODO Allow fallback vs exact to be configurable
         let support = crate::config::get_color_support();
         let should_fallback = crate::config::get_convert_to_supported();
 
