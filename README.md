@@ -1,6 +1,10 @@
 # `chromaterm`
 
+[![Crates.io Version](https://img.shields.io/crates/v/chromaterm)](https://crates.io/crates/chromaterm)
+
 Yet another crate for terminal colors.
+
+[docs.rs](https://docs.rs/chromaterm/)
 
 ## Some goals
 
