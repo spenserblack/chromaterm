@@ -28,7 +28,7 @@ println!("Hello, {}!", "World".green().on_blue().bold());
 Colorization is available on `&str` and all types that implement `Deref<Target=str>`
 (like `String`).
 
-You can run `cargo run --example basic`, too.
+Check out the examples for more usage.
 
 ## Trade-offs
 
