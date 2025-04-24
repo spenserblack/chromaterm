@@ -11,5 +11,6 @@ exclude = [".devcontainer/", ".github/", ".vscode/", ".editorconfig", ".gitignor
 rust-version = "1.86"
 
 [dev-dependencies]
+clap = { version = "4", features = ["derive"] }
 rand = "0.9"
 rstest = { version = "0.25", default-features = false, features = ["crate-name"] }
