@@ -8,7 +8,7 @@ repository = "https://github.com/spenserblack/chromaterm.git"
 keywords = ["color", "terminal", "ansi"]
 categories = ["command-line-interface"]
 exclude = [".devcontainer/", ".github/", ".vscode/", ".editorconfig", ".gitignore"]
-rust-version = "1.86"
+rust-version = "1.85.1"
 
 [dev-dependencies]
 clap = { version = "4", features = ["derive"] }
