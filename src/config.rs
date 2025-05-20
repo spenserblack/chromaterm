@@ -17,7 +17,7 @@ impl ColorSupport {
         value << Self::BIT_SHIFT
     }
 
-    const fn from_config(config: u8) -> Self {
+    fn from_config(config: u8) -> Self {
         const MASK: u8 = 0b11_000000;
         match (config & MASK) >> Self::BIT_SHIFT {
             0b00 => Self::None,
@@ -56,7 +56,7 @@ impl Fallback {
         value << Self::BIT_SHIFT
     }
 
-    const fn from_config(config: u8) -> Self {
+    fn from_config(config: u8) -> Self {
         const MASK: u8 = 0b00_1_00000;
         match (config & MASK) >> Self::BIT_SHIFT {
             0 => Self::No,
