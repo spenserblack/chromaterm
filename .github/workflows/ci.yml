@@ -23,7 +23,7 @@ jobs:
           - "stable"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Set up Rust ${{ matrix.rust-version }}
         uses: dtolnay/rust-toolchain@master
         id: setup-rust
