@@ -12,5 +12,5 @@ rust-version = "1.85.1"
 
 [dev-dependencies]
 clap = { version = "4", features = ["derive"] }
-rand = "0.9"
+rand = "0.10"
 rstest = { version = "0.26", default-features = false, features = ["crate-name"] }
